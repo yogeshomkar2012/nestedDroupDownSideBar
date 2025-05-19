@@ -4,6 +4,8 @@ import HomeLayout from "../layouts/HomeLayout";
 import ProductListPage from "../pages/product/ProductListPage";
 import CreateCategoryPage from "../pages/category/CreateCategoryPage";
 import CategoryListPage from "../pages/category/CategoryListPage";
+import UsersListPage from "../pages/user/usersListPage";
+import UserCreatePage from "../pages/user/userCreatePage";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +21,7 @@ const router = createBrowserRouter([
         element: <ProductListPage />,
       },
       {
-        path: "/admin/products/create",
+        path: "/admin/product/create",
         element: <CreateCategoryPage />,
       },
       {
@@ -30,6 +32,15 @@ const router = createBrowserRouter([
         path: "/admin/categories/create",
         element: <CreateCategoryPage />,
       },
+      // users
+      {
+        path: "/admin/users",
+        element:<UsersListPage/>
+      }, {
+        path: "/admin/user/create",
+        element:<UserCreatePage/>
+      }
+     
     ],
   },
 ]);
