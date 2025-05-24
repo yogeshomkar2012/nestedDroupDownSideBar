@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "../pages/HomePage";
 import HomeLayout from "../layouts/HomeLayout";
-import ProductListPage from "../pages/product/ProductListPage";
-import CreateCategoryPage from "../pages/category/CreateCategoryPage";
-import CategoryListPage from "../pages/category/CategoryListPage";
-import UsersListPage from "../pages/user/usersListPage";
-import UserCreatePage from "../pages/user/userCreatePage";
+import DashBoard from "../pages/DashBoard";
+import { PATHS } from "./paths";
+import ProductList from "../pages/product/ProductListPage";
+import ProductCreatePage from "../pages/product/ProductCreatePage";
+import CategoryListPage from "../pages/product/CategoryListPage";
+import CategoryCreatePage from "../pages/product/CategoryCreatePage";
 
 const router = createBrowserRouter([
   {
@@ -14,33 +14,24 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <DashBoard />,
       },
       {
-        path: "/admin/products",
-        element: <ProductListPage />,
+        path: PATHS.productManagement.product.list,
+        element: <ProductList />,
       },
       {
-        path: "/admin/product/create",
-        element: <CreateCategoryPage />,
+        path: PATHS.productManagement.product.create,
+        element: <ProductCreatePage />,
       },
       {
-        path: "/admin/categories",
+        path: PATHS.productManagement.category.list,
         element: <CategoryListPage />,
       },
       {
-        path: "/admin/categories/create",
-        element: <CreateCategoryPage />,
+        path: PATHS.productManagement.category.create,
+        element: <CategoryCreatePage />,
       },
-      // users
-      {
-        path: "/admin/users",
-        element:<UsersListPage/>
-      }, {
-        path: "/admin/user/create",
-        element:<UserCreatePage/>
-      }
-     
     ],
   },
 ]);
