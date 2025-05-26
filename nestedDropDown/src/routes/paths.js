@@ -1,5 +1,7 @@
+import { ROUTE_PATHS } from "../constants/path_constants";
+
 export const PATHS = {
-  dashboard: "/admin/dashboard",
+  // dashboard: "/admin/dashboard",
   sideNav: [
     {
       title: "Product Management",
@@ -8,12 +10,12 @@ export const PATHS = {
           title: "Product",
           dropDownItemLinks: [
             {
-              title: "Products",
-              linkTo: "/admin/products",
+              title: "Products List",
+              linkTo: ROUTE_PATHS.productList,
             },
             {
               title: "Product Create",
-              linkTo: "/admin/product/create",
+              linkTo: ROUTE_PATHS.productCreate,
             },
           ],
         },
@@ -22,11 +24,11 @@ export const PATHS = {
           dropDownItemLinks: [
             {
               title: "Categories",
-              linkTo: "/admin/categories",
+              linkTo: ROUTE_PATHS.categoryList,
             },
             {
               title: "Create Category",
-              linkTo: "/admin/category/create",
+              linkTo: ROUTE_PATHS.categoryCreate,
             },
           ],
         },
@@ -36,28 +38,15 @@ export const PATHS = {
       title: "User Management",
       dropdownItems: [
         {
-          title: "Users",
+          title: "User",
           dropDownItemLinks: [
             {
               title: "User List",
-              linkTo: "/admin/users",
+              linkTo: ROUTE_PATHS.userList,
             },
             {
               title: "Create User",
-              linkTo: "/admin/user/create",
-            },
-          ],
-        },
-        {
-          title: "Category",
-          dropDownItemLinks: [
-            {
-              title: "Categories",
-              linkTo: "/admin/categories",
-            },
-            {
-              title: "Create Category",
-              linkTo: "/admin/category/create",
+              linkTo: ROUTE_PATHS.userCreate,
             },
           ],
         },
